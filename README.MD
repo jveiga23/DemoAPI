@@ -29,25 +29,22 @@ Terraform manages: Resource Group, App Service Plan, App Service
 
 Prerequisites: .NET 8 SDK, Docker
 
-\`\`\`bash
 # Without Docker
 dotnet run --project DemoApi.Api
 
 # With Docker
 docker build -t demo-api .
 docker run -p 8080:8080 demo-api
-\`\`\`
 
 ## Infrastructure
 
 Managed with Terraform. See `infra/` for configuration.
 
-\`\`\`bash
+bash
 cd infra
 terraform init
 terraform plan
 terraform apply
-\`\`\`
 
 ## CI/CD
 
